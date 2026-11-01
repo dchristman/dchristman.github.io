@@ -1,0 +1,27 @@
+project:
+  type: website
+  render:
+    - "*.md"
+    - "!CLAUDE.md"
+
+metadata-files:
+  - _host.yml
+
+website:
+  title: "Dennis Christman"
+  search: false
+  navbar:
+    pinned: false
+    background: dark
+    left:
+      - text: About
+        href: index.md
+      - text: Musings
+        href: musings/index.md
+      - text: CV
+        href: cv.md
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css

@@ -1,0 +1,27 @@
+/* Painting behind every page. A fixed element is used because
+   background-attachment: fixed is unreliable on iOS. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: url("assets/wanderer.jpg") center / cover no-repeat;
+}
+
+/* Content frame above the painting. */
+main.content {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.94);
+  border-radius: 6px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+}
+
+@media (max-width: 575.98px) {
+  main.content {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 1.25rem;
+  }
+}
