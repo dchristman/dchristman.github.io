@@ -1,0 +1,4 @@
+# Host-specific site settings. Moving hosts means changing this file and
+# .github/workflows/publish.yml.
+website:
+  site-url: https://dchristman.github.io
